@@ -3,7 +3,9 @@ package com.github.ki3lmigu3l.api.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -33,5 +35,10 @@ public class ClienteController {
     @PutMapping
     public Cliente editarCliente (@RequestBody Cliente cliente) {
         return clienteRepository.save(cliente);
+    }
+
+    @DeleteMapping("{id}")
+    public void deletarCliente (@PathVariable Long id) {
+        clienteRepository.deleteById(id);
     }
 }
