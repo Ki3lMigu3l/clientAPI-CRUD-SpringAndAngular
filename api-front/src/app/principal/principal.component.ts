@@ -15,6 +15,9 @@ export class PrincipalComponent {
     // Variável para visibilidade dos botões
     btnCadastro: boolean = true;
 
+    // Variável para visibilidade da tabela
+    tabela:boolean = true;
+
     // JSON de clientes
     clientes: Cliente[] = [];
 
@@ -40,6 +43,43 @@ export class PrincipalComponent {
         // Mensagem
         alert('Cliente cadastrado com sucesso!');
       });
+    }
+
+    // Método para selecionar um cliente especifico
+    selecionarCliente(posicao:number):void {
+
+        // Selecionar cliente no vetor
+        this.cliente = this.clientes[posicao];
+
+        // Visibilidade dos botões
+        this.btnCadastro = false;
+
+        // Visibilidade da tabela
+        this.tabela = false;
+    }
+
+    // Método para editar clientes
+    editar(): void {
+      this.servico.editar(this.cliente)
+      .subscribe(retorno => {
+        
+          // Obter posição do vetor onde está o cliente
+          let posicao = this.clientes.findIndex(obj => {
+            return obj.id == retorno.id;
+          });
+
+          // Alterar os dados do cliente no vetor
+          this.clientes[posicao] = retorno;
+
+          // Visibilidade dos botões
+          this.btnCadastro = true;
+
+          // Visibilidade da tabela
+          this.tabela = true;
+
+          // Mensagem
+          alert('Cliente alterado com sucesso!');
+      })
     }
 
     // Método de inicialização
