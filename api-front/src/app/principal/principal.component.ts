@@ -71,6 +71,9 @@ export class PrincipalComponent {
           // Alterar os dados do cliente no vetor
           this.clientes[posicao] = retorno;
 
+          // Limpar formulário
+          this.cliente = new Cliente();
+
           // Visibilidade dos botões
           this.btnCadastro = true;
 
