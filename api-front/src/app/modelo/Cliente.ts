@@ -1,7 +1,7 @@
 export class Cliente {
 
-    private id: number = 0;
-    private nome: string = '';
-    private idade: number = 0;
-    private cidade: string = '';
+    id: number = 0;
+    nome: string = '';
+    idade: number = 0;
+    cidade: string = '';
 }
