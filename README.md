@@ -32,5 +32,5 @@ Exemplo de corpo da requisição:
 {
   "nome": "João Silva",
   "idade": 20,
-  "cidade": Belo Jardim"
+  "cidade": "Belo Jardim"
 }
