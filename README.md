@@ -1,36 +1,35 @@
-# Documentação da API de Cadastro de Clientes
+# Cadastro de clientes API
+Cadastro de Clientes é um projeto que combina as tecnologias Spring Boot e Angular. Esta API foi desenvolvida com o objetivo de realizar operações CRUD (Create, Read, Update, Delete) para cadastro de clientes.
 
-## Introdução
+<br>
+<div align="center">
+  <h2>Tecnologias utilizadas</h2>
+</div>
 
-Bem-vindo à documentação da API de Cadastro de Clientes, um projeto que utiliza Spring Boot e Angular. Esta API foi desenvolvida com o objetivo de realizar operações CRUD (Create, Read, Update, Delete) para cadastro de clientes utilizando essas duas tecnologias.
+<div align="center">
+      <img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/lombok.png" alt="lombok" title="lombok"/>
+    <img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/spring_boot.png" alt="spring boot" title="spring boot"/>
+    <img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/mysql.png" alt="mysql" title="mysql"/>
+  <img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/angular.png" alt="angular" title="angular"/>
+  <img width="50" src="https://raw.githubusercontent.com/marwin1991/profile-technology-icons/refs/heads/main/icons/typescript.png" alt="typescript" title="typescript"/>
+</div>
 
-## Tecnologias Utilizadas
+<br>
 
-- **Backend:**
-  - Spring Boot: Framework Java para desenvolvimento de aplicativos web e serviços RESTful.
-  - MySQL: Sistema de gerenciamento de banco de dados relacional para persistência de dados.
+### Endpoints da API
 
-- **Frontend:**
-  - Angular: Framework TypeScript/JavaScript para construção de interfaces de usuário.
+| EndPoint  | Método HTTP   | Descrição   |
+|---------------|---------------|---------------|
+| /clientes | GET | Lista todos os clientes |
+| /clientes | POST | Cadastrar um novo cliente |
+| /clientes/{id} | PUT | Atualiza os dados do cliente especifico |
+| /clientes/{id} | DELETE | Deleta um cliente em especifico |
 
-## Endpoints da API
+<br>
 
-### 1. Listar Todos os Clientes
+### Conclusão
+<p>O projeto Cadastro de Clientes combina o poder do Spring Boot no backend e a agilidade do Angular no frontend para entregar uma solução moderna e eficiente de CRUD de clientes. O backend fornece uma API REST robusta e escalável, com JPA para persistência e Bean Validation para garantir a integridade dos dados. No frontend, o Angular oferece uma interface intuitiva e responsiva, proporcionando uma experiência fluida ao usuário.
 
-**Endpoint:** `/clientes`  
-**Método:** `GET`  
-**Descrição:** Retorna uma lista de todos os clientes cadastrados.
+A separação entre backend e frontend garante modularidade, facilitando a manutenção e evolução do sistema. Este projeto destaca-se pela segurança, organização e escalabilidade, tornando-se uma base sólida para futuras melhorias e novas funcionalidades.
 
-### 2. Cadastrar Novo Cliente
-
-**Endpoint:** `/clientes`  
-**Método:** `POST`  
-**Descrição:** Cadastra um novo cliente. O corpo da requisição deve conter os dados do cliente.
-
-Exemplo de corpo da requisição:
-```json
-{
-  "nome": "João Silva",
-  "idade": 20,
-  "cidade": "Belo Jardim"
-}
+Com isso, a aplicação atende às necessidades de gerenciamento de clientes de forma prática, confiável e eficiente.</p>
